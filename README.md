@@ -23,7 +23,7 @@ required to split an internal node is set to 2.
 tree 1 = DecisionTreeClassifer ( criterion =' entropy ', min _ samples _ split =2)
 The tree is trained with the training data . The data is randomly split into test and train data
 using test _ train split .
-```
+```python
 x , x 1, y , y 1 = train _ test _ split ( train , label , train _ size = i , test _ size =1- i , random _ state =10)
 Each set of splitted data is used train diferent tree models . And predictions are done on
 both test data and remaining training data .

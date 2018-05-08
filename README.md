@@ -9,14 +9,12 @@ is a feature vector of length 30. The first 10 entries in this feature vector ar
 listed above for each image. The second 10 are the standard deviation and last 10 are the
 largest value of each of these characteristics present in each image.
 
-• Training data: ‘ trainX.csv 
+-Training data:  trainX.csv 
 consisting of 455 samples, 30 attributes. The label associated
-with each sample is provided in ‘ trainY.csv 
-. A label of value 1 indicates the sample was
+with each sample is provided in  trainY.csv . A label of value 1 indicates the sample was
 for malignant (cancerous) tissue, 0 indicates the sample was for benign tissue. .
-• Test data: ‘ testX.csv 
-consisting of 57 samples, 30 attributes. The label associated with
-each sample is provided in ‘ testY.csv 
+- Test data:  testX.csv consisting of 57 samples, 30 attributes. The label associated with
+each sample is provided in  testY.csv 
 
 Data is imported using pandas library from csv fle to dataframe . This dataframe is
 converteed to numpy array using as _ matrix ().
@@ -25,7 +23,8 @@ required to split an internal node is set to 2.
 tree 1 = DecisionTreeClassifer ( criterion =' entropy ', min _ samples _ split =2)
 The tree is trained with the training data . The data is randomly split into test and train data
 using test _ train split .
-'''x , x 1, y , y 1 = train _ test _ split ( train , label , train _ size = i , test _ size =1- i , random _ state =10)
+```
+x , x 1, y , y 1 = train _ test _ split ( train , label , train _ size = i , test _ size =1- i , random _ state =10)
 Each set of splitted data is used train diferent tree models . And predictions are done on
 both test data and remaining training data .
 tree 1 = tree 1. ft ( x , y )
@@ -51,7 +50,8 @@ plt . xlabel (" fraction of input ")
 # plt . ylabel (" accuracy (%)", fontsize = 15)
 plt . show ()
 fg . savefg (' graph . png ')
-Graph'''
+Graph
+```
 
 Figure 1 plots the accuracy score of prediction for test data when 0.2, 0.4, 0.6.. fractions of
 training data is taken for training .
@@ -62,7 +62,9 @@ The Confusion matrix was obtained to be :
 31 1
 3 22
 The decision tree is converted to dot . fle using ,
-'''tree . export _ graphviz ( tree 1, out _ fle =' tree . dot ', feature _ names = names ,class _ names =[' Beningn ',' Malign '])'''
+```
+tree . export _ graphviz ( tree 1, out _ fle =' tree . dot ', feature _ names = names ,class _ names =[' Beningn ',' Malign '])
+```
 The dot fle is converted into pdf using
 'dot - Tpdf tree . dot - o tree . pdf'
 The diagram of desicion tree is attached below .

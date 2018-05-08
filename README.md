@@ -62,7 +62,7 @@ The Confusion matrix was obtained to be :
 31 1
 3 22
 The decision tree is converted to dot . fle using ,
-```
+```python
 tree . export _ graphviz ( tree 1, out _ fle =' tree . dot ', feature _ names = names ,class _ names =[' Beningn ',' Malign '])
 ```
 The dot fle is converted into pdf using

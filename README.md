@@ -35,7 +35,10 @@ acc _ train . append ( accuracy _ score ( y 1, train _ predict )*100)
 acc _ test . append ( accuracy _ score ( label _ test , test _ predict )*100)
 After that similar procedure is done for training the tree with 100% training data .
 inputvalue 1 = np . append ( inputvalue , 1)
-# printing accuracy for 100% training data
+```
+
+Printing accuracy for 100% training data and plotting the results
+```python
 tree 1 = tree 1. ft ( train , label )
 label _ predict = tree 1. predict ( test )
 acc _ test . append ( accuracy _ score ( label _ test , label _ predict )*100)
@@ -67,7 +70,7 @@ tree . export _ graphviz ( tree 1, out _ fle =' tree . dot ', feature _ names = 
 ```
 The dot fle is converted into pdf using
 'dot - Tpdf tree . dot - o tree . pdf'
-The diagram of desicion tree is attached below .
 Total number of nodes is 25
 Total number of leaf nodes is 14
+
 .
